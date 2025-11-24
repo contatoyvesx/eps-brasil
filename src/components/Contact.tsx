@@ -60,7 +60,7 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="lg:col-span-2">
-            <Card className="p-8 border-border bg-card shine-on-hover">
+            <Card className="p-6 sm:p-8 border-border bg-card shine-on-hover">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="md:col-span-2">
@@ -117,11 +117,11 @@ const Contact = () => {
             </Card>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-6 flex flex-col items-center">
             {contactInfo.map((item, index) => (
               <Card
                 key={index}
-                className="p-6 hover:shadow-lg transition-all duration-500 border-border bg-card shine-on-hover"
+                className="p-5 sm:p-6 hover:shadow-lg transition-all duration-500 border-border bg-card shine-on-hover w-full max-w-sm mx-auto"
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">

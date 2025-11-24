@@ -57,11 +57,11 @@ const Benefits = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 order-2 lg:order-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 order-2 lg:order-1 justify-items-center">
             {benefits.map((benefit, index) => (
               <Card
                 key={index}
-                className="p-6 hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border-border bg-card shine-on-hover"
+                className="p-5 sm:p-6 hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border-border bg-card shine-on-hover w-full max-w-sm mx-auto"
               >
                 <benefit.icon className="w-10 h-10 text-primary mb-4" />
                 <h3 className="text-lg font-bold mb-2 text-card-foreground">{benefit.title}</h3>
