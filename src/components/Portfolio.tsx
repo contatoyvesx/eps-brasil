@@ -12,9 +12,8 @@ const regions = [
     title: 'Norte',
     image: norteImage,
     gradient: 'from-emerald-500/70 via-primary/70 to-emerald-700/70',
-    summary:
-      'Projetos leves e isolantes para enfrentar a umidade com eficiência energética superior.',
-    tags: ['Climatização otimizada', 'Montagem enxuta', 'Estruturas elevadas'],
+    summary: '',
+    tags: [],
     metrics: [
       { label: 'Prazo médio', value: '45 dias' },
       { label: 'Eficiência térmica', value: '+38%' },
@@ -118,19 +117,25 @@ const Portfolio = () => {
                   </div>
                 </div>
 
-                <p className="text-muted-foreground text-base leading-relaxed line-clamp-3">{region.summary}</p>
+                {region.summary && (
+                  <p className="text-muted-foreground text-base leading-relaxed line-clamp-3">
+                    {region.summary}
+                  </p>
+                )}
 
-                <div className="flex flex-wrap gap-2">
-                  {region.tags.map((tag) => (
-                    <Badge
-                      key={tag}
-                      variant="secondary"
-                      className="bg-primary/10 text-primary border-primary/20"
-                    >
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
+                {!!region.tags.length && (
+                  <div className="flex flex-wrap gap-2">
+                    {region.tags.map((tag) => (
+                      <Badge
+                        key={tag}
+                        variant="secondary"
+                        className="bg-primary/10 text-primary border-primary/20"
+                      >
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                )}
 
                 <div className="grid grid-cols-2 gap-3">
                   {region.metrics.map((metric) => (
