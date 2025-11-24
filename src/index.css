@@ -76,6 +76,47 @@ All colors MUST be HSL.
     animation: fadeIn 0.8s ease-out forwards;
   }
 
+  .animate-gradient-slow {
+    background-size: 200% 200%;
+    animation: gradientShift 16s ease infinite;
+  }
+
+  .animate-float-slow {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .animate-float-delay {
+    animation: float 10s ease-in-out infinite;
+    animation-delay: 1.5s;
+  }
+
+  .shine-on-hover {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shine-on-hover::after {
+    content: "";
+    position: absolute;
+    inset: -120%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      hsla(130, 25%, 64%, 0.08),
+      transparent
+    );
+    transition: transform 0.6s ease;
+    transform: translateX(-20%);
+  }
+
+  .shine-on-hover:hover::after {
+    transform: translateX(120%);
+  }
+
+  .glow-ring {
+    box-shadow: 0 10px 40px hsla(130, 25%, 64%, 0.18);
+  }
+
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -93,6 +134,30 @@ All colors MUST be HSL.
     }
     to {
       opacity: 1;
+    }
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+    100% {
+      transform: translateY(0px);
     }
   }
 }
