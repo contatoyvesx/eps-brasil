@@ -23,9 +23,8 @@ const regions = [
     title: 'Nordeste',
     image: nordesteImage,
     gradient: 'from-orange-400/70 via-primary/70 to-amber-500/70',
-    summary:
-      'Residenciais frescos e confortáveis, com conforto acústico para o ritmo urbano e litorâneo.',
-    tags: ['Ventilação cruzada', 'Design bioclimático', 'Acabamento premium'],
+    summary: '',
+    tags: [],
     metrics: [
       { label: 'Projetos entregues', value: '22' },
       { label: 'Economia de energia', value: '30%' },
@@ -35,9 +34,8 @@ const regions = [
     title: 'Centro-Oeste',
     image: centroOesteImage,
     gradient: 'from-lime-400/70 via-primary/70 to-emerald-500/70',
-    summary:
-      'Obras corporativas e residenciais com alto desempenho térmico para amplitudes de temperatura.',
-    tags: ['Obra limpa', 'Grandes vãos', 'Controle térmico'],
+    summary: '',
+    tags: [],
     metrics: [
       { label: 'Torres e galpões', value: '15' },
       { label: 'Redução de resíduos', value: '42%' },
@@ -47,9 +45,8 @@ const regions = [
     title: 'Sudeste',
     image: sudesteImage,
     gradient: 'from-sky-400/70 via-primary/70 to-blue-600/70',
-    summary:
-      'Soluções modernas para centros urbanos, com conforto acústico e velocidade de execução.',
-    tags: ['Conforto urbano', 'Painéis modulados', 'Detalhe arquitetônico'],
+    summary: '',
+    tags: [],
     metrics: [
       { label: 'Obras emblemáticas', value: '28' },
       { label: 'Prazo reduzido', value: '35%' },
@@ -59,9 +56,8 @@ const regions = [
     title: 'Sul',
     image: sulImage,
     gradient: 'from-indigo-400/70 via-primary/70 to-slate-800/70',
-    summary:
-      'Estruturas preparadas para temperaturas baixas, mantendo aconchego e eficiência energética.',
-    tags: ['Isolamento reforçado', 'Performance acústica', 'Canteiro rápido'],
+    summary: '',
+    tags: [],
     metrics: [
       { label: 'Chalés e casas', value: '19' },
       { label: 'Economia em aquecimento', value: '27%' },
