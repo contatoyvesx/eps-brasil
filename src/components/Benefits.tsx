@@ -1,0 +1,85 @@
+import { Card } from '@/components/ui/card';
+import {
+  Clock,
+  Wallet,
+  ThermometerSnowflake,
+  Recycle,
+  HardHat,
+  Lightbulb,
+} from 'lucide-react';
+import houseImage from '@/assets/modern-house.jpg';
+
+const Benefits = () => {
+  const benefits = [
+    {
+      icon: Clock,
+      title: 'Rapidez na Execução',
+      description: 'Redução de até 50% no tempo de construção',
+    },
+    {
+      icon: Wallet,
+      title: 'Economia',
+      description: 'Menor custo de mão de obra e materiais',
+    },
+    {
+      icon: ThermometerSnowflake,
+      title: 'Conforto Térmico',
+      description: 'Isolamento térmico superior reduz custos com climatização',
+    },
+    {
+      icon: Recycle,
+      title: 'Sustentabilidade',
+      description: 'Material reciclável e baixo impacto ambiental',
+    },
+    {
+      icon: HardHat,
+      title: 'Segurança',
+      description: 'Obra mais limpa e segura para trabalhadores',
+    },
+    {
+      icon: Lightbulb,
+      title: 'Versatilidade',
+      description: 'Projetos customizados e arquitetura moderna',
+    },
+  ];
+
+  return (
+    <section id="vantagens" className="py-24 bg-muted">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Vantagens da <span className="text-primary">Construção em EPS</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Descubra por que a construção em EPS é a escolha inteligente para seu projeto
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid sm:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <Card
+                key={index}
+                className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border bg-card"
+              >
+                <benefit.icon className="w-10 h-10 text-primary mb-4" />
+                <h3 className="text-lg font-bold mb-2 text-card-foreground">{benefit.title}</h3>
+                <p className="text-sm text-muted-foreground">{benefit.description}</p>
+              </Card>
+            ))}
+          </div>
+
+          <div className="animate-fade-in">
+            <img
+              src={houseImage}
+              alt="Casa Moderna"
+              className="rounded-2xl shadow-2xl w-full h-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Benefits;
