@@ -79,11 +79,11 @@ const Portfolio = () => {
           </span>
         </div>
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-12">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="text-center md:text-left">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
               Obras que elevam <span className="text-primary">cada região</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto md:mx-0">
               Nossos projetos em EPS acompanham as particularidades climáticas e culturais do Brasil,
               entregando conforto, velocidade e sustentabilidade em qualquer latitude.
             </p>
@@ -136,7 +136,7 @@ const Portfolio = () => {
                   </div>
                 )}
 
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {region.metrics.map((metric) => (
                     <div
                       key={metric.label}

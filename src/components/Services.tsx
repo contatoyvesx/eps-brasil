@@ -33,10 +33,10 @@ const Services = () => {
     <section id="servicos" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Nossos <span className="text-primary">Serviços</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             Oferecemos soluções completas em construção com EPS para diversos tipos de
             projetos
           </p>

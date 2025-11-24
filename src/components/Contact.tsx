@@ -49,10 +49,10 @@ const Contact = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/10 animate-gradient-slow pointer-events-none" />
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Entre em <span className="text-primary">Contato</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             Solicite um orçamento sem compromisso e descubra como a EPS BRASIL pode
             transformar seu projeto
           </p>

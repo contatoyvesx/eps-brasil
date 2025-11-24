@@ -26,17 +26,17 @@ const Hero = () => {
         <div className="absolute -right-8 bottom-10 h-64 w-64 bg-secondary/40 blur-[80px] rounded-full animate-float-delay" />
       </div>
 
-      <div className="container mx-auto px-4 py-32 relative z-10">
-        <div className="max-w-3xl animate-fade-in-up space-y-8">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-background">
+      <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
+        <div className="max-w-3xl animate-fade-in-up space-y-8 text-center md:text-left mx-auto md:mx-0">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 text-background leading-tight">
             Construção em EPS
             <span className="block text-primary">Inovadora e Sustentável</span>
           </h1>
-          <p className="text-xl md:text-2xl text-background/90">
+          <p className="text-lg sm:text-xl md:text-2xl text-background/90">
             A EPS BRASIL utiliza tecnologia de ponta em construção com EPS para criar
             projetos mais rápidos, econômicos e ecologicamente corretos.
           </p>
-          <div className="grid sm:grid-cols-[auto,auto] gap-4 w-fit">
+          <div className="grid grid-cols-1 sm:grid-cols-[auto,auto] gap-4 w-full sm:w-fit sm:mx-auto md:mx-0">
             <Button
               size="lg"
               onClick={scrollToContact}
@@ -62,7 +62,7 @@ const Hero = () => {
             {["Tecnologia ágil", "Isolamento superior", "Equipes especializadas"].map((item, index) => (
               <div
                 key={item}
-                className={`rounded-2xl bg-background/10 backdrop-blur-sm border border-background/20 p-4 shine-on-hover ${
+                className={`rounded-2xl bg-background/10 backdrop-blur-sm border border-background/20 p-4 shine-on-hover text-left sm:text-center ${
                   index === 1 ? 'animate-float-slow' : 'animate-float-delay'
                 }`}
               >
