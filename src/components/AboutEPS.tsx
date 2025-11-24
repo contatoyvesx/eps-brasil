@@ -30,25 +30,25 @@ const AboutEPS = () => {
     <section id="sobre" className="py-24 bg-muted">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="animate-fade-in-up text-center md:text-left">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
               O que é <span className="text-primary">Construção em EPS?</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-6">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6">
               O EPS (Poliestireno Expandido) é um material inovador que revoluciona a
               construção civil. Leve, resistente e isolante térmico, o EPS permite
               construções mais rápidas, econômicas e sustentáveis.
             </p>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base sm:text-lg text-muted-foreground mb-8">
               Na EPS BRASIL, utilizamos a mais avançada tecnologia em construção com EPS,
               garantindo qualidade, segurança e eficiência em cada projeto.
             </p>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-items-center">
               {features.map((feature, index) => (
                 <Card
                   key={index}
-                  className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border bg-card"
+                  className="p-5 sm:p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border bg-card w-full max-w-sm mx-auto"
                 >
                   <feature.icon className="w-8 h-8 text-primary mb-3" />
                   <h3 className="font-bold mb-2 text-card-foreground">{feature.title}</h3>
@@ -58,7 +58,7 @@ const AboutEPS = () => {
             </div>
           </div>
 
-          <div className="animate-fade-in">
+          <div className="animate-fade-in w-full max-w-xl mx-auto md:mx-0">
             <img
               src={epsImage}
               alt="Blocos de EPS"
