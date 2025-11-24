@@ -33,7 +33,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      info: 'contato@techfreire.com.br',
+      info: 'contato@epsbrasil.com.br',
     },
     {
       icon: MapPin,
@@ -50,7 +50,7 @@ const Contact = () => {
             Entre em <span className="text-primary">Contato</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Solicite um orçamento sem compromisso e descubra como a TECHFREIRE pode
+            Solicite um orçamento sem compromisso e descubra como a EPS BRASIL pode
             transformar seu projeto
           </p>
         </div>
