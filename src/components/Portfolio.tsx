@@ -94,13 +94,16 @@ const Portfolio = () => {
           {regions.map((region) => (
             <Card
               key={region.title}
-              className="h-full overflow-hidden border-border/70 bg-card/80 backdrop-blur-xl shadow-lg shadow-primary/10"
+              className="group h-full overflow-hidden border-border/70 bg-card/80 backdrop-blur-xl shadow-lg shadow-primary/10 transition-transform duration-500 hover:-translate-y-2 shine-on-hover"
             >
-              <div className="h-40 w-full overflow-hidden bg-muted">
+              <div className="relative h-40 w-full overflow-hidden bg-muted">
                 <img
                   src={region.image}
                   alt={`Projeto na região ${region.title}`}
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
+                />
+                <div
+                  className={`absolute inset-0 opacity-0 group-hover:opacity-70 transition-opacity duration-700 bg-gradient-to-r ${region.gradient}`}
                 />
               </div>
 
