@@ -3,37 +3,39 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card } from '@/components/ui/card';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Phone, MapPin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     phone: '',
     message: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const whatsappNumber = '551140035332';
+    const summary = `Olá! Meu nome é ${formData.name}. Meu telefone é ${formData.phone}. Mensagem: ${formData.message}`;
+
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(summary)}`,
+      '_blank'
+    );
+
     toast({
-      title: 'Mensagem enviada!',
-      description: 'Entraremos em contato em breve.',
+      title: 'Redirecionando para WhatsApp',
+      description: 'Você será direcionado para enviar sua mensagem.',
     });
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    setFormData({ name: '', phone: '', message: '' });
   };
 
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Telefone',
-      info: '(11) 9999-9999',
-    },
-    {
-      icon: Mail,
-      title: 'Email',
-      info: 'contato@epsbrasil.com.br',
+      title: 'WhatsApp',
+      info: '+55 11 4003-5332',
     },
     {
       icon: MapPin,
@@ -60,9 +62,9 @@ const Contact = () => {
             <Card className="p-8 border-border bg-card">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div>
+                  <div className="md:col-span-2">
                     <label className="block text-sm font-medium mb-2 text-card-foreground">
-                      Nome Completo
+                      Nome
                     </label>
                     <Input
                       required
@@ -72,21 +74,6 @@ const Contact = () => {
                       }
                       className="bg-background border-border"
                       placeholder="Seu nome"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2 text-card-foreground">
-                      Email
-                    </label>
-                    <Input
-                      required
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                      className="bg-background border-border"
-                      placeholder="seu@email.com"
                     />
                   </div>
                 </div>
