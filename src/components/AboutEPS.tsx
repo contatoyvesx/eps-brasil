@@ -40,7 +40,7 @@ const AboutEPS = () => {
               construções mais rápidas, econômicas e sustentáveis.
             </p>
             <p className="text-lg text-muted-foreground mb-8">
-              Na TECHFREIRE, utilizamos a mais avançada tecnologia em construção com EPS,
+              Na EPS BRASIL, utilizamos a mais avançada tecnologia em construção com EPS,
               garantindo qualidade, segurança e eficiência em cada projeto.
             </p>
 

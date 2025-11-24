@@ -30,7 +30,7 @@ const Hero = () => {
             <span className="block text-primary">Inovadora e Sustentável</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-background/90">
-            A TECHFREIRE utiliza tecnologia de ponta em construção com EPS para criar
+            A EPS BRASIL utiliza tecnologia de ponta em construção com EPS para criar
             projetos mais rápidos, econômicos e ecologicamente corretos.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">

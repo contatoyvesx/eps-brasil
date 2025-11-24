@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,9 +31,9 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold">
-            <span className="text-foreground">TECH</span>
-            <span className="text-primary">FREIRE</span>
+          <div className="flex items-center gap-3 text-2xl font-bold text-foreground">
+            <img src={logo} alt="Logo EPS BRASIL" className="h-10 w-10 rounded-full shadow-md" />
+            <span className="tracking-tight">EPS BRASIL</span>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
@@ -53,6 +54,12 @@ const Header = () => {
               className="text-foreground hover:text-primary transition-colors"
             >
               Serviços
+            </button>
+            <button
+              onClick={() => scrollToSection('portfolio')}
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Portfólio
             </button>
             <button
               onClick={() => scrollToSection('vantagens')}
@@ -95,6 +102,12 @@ const Header = () => {
               className="text-foreground hover:text-primary transition-colors text-left"
             >
               Serviços
+            </button>
+            <button
+              onClick={() => scrollToSection('portfolio')}
+              className="text-foreground hover:text-primary transition-colors text-left"
+            >
+              Portfólio
             </button>
             <button
               onClick={() => scrollToSection('vantagens')}
