@@ -1,10 +1,3 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import centroOesteImage from '@/assets/centro-oeste.jpg';
@@ -12,7 +5,7 @@ import nordesteImage from '@/assets/nordeste.jpg';
 import norteImage from '@/assets/norte.jpg';
 import sulImage from '@/assets/sul.jpg';
 import sudesteImage from '@/assets/suldeste.jpg';
-import { MapPin, Sparkles } from 'lucide-react';
+import { Globe2, Sparkles } from 'lucide-react';
 
 const regions = [
   {
@@ -102,67 +95,60 @@ const Portfolio = () => {
           </div>
         </div>
 
-        <Carousel opts={{ align: 'start', loop: true }} className="relative">
-          <CarouselContent>
-            {regions.map((region) => (
-              <CarouselItem key={region.title} className="md:basis-1/2 lg:basis-1/3">
-                <Card className="h-full overflow-hidden border-border/70 bg-card/80 backdrop-blur-xl shadow-lg shadow-primary/10">
-                  <div className="relative h-56 w-full">
-                    <img
-                      src={region.image}
-                      alt={`Projeto na região ${region.title}`}
-                      className="h-full w-full object-cover"
-                    />
-                    <div className={`absolute inset-0 bg-gradient-to-tr ${region.gradient}`} />
-                    <div className="absolute bottom-4 left-4 flex flex-col gap-2 text-background">
-                      <Badge className="w-fit bg-background/20 text-background border-background/30">
-                        {region.title}
-                      </Badge>
-                      <div className="flex items-center gap-2 text-sm">
-                        <MapPin className="w-4 h-4" />
-                        <span>Implantação regional EPS</span>
-                      </div>
-                    </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          {regions.map((region) => (
+            <Card
+              key={region.title}
+              className="h-full overflow-hidden border-border/70 bg-card/80 backdrop-blur-xl shadow-lg shadow-primary/10"
+            >
+              <div className="h-40 w-full overflow-hidden bg-muted">
+                <img
+                  src={region.image}
+                  alt={`Projeto na região ${region.title}`}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+
+              <div className="p-5 space-y-4">
+                <div className="flex items-center justify-between gap-3">
+                  <Badge className="w-fit bg-primary/10 text-primary border-primary/20">{region.title}</Badge>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Globe2 className="w-4 h-4" />
+                    <span>Implantação regional EPS</span>
                   </div>
+                </div>
 
-                  <div className="p-6 space-y-4">
-                    <p className="text-muted-foreground text-base leading-relaxed">
-                      {region.summary}
-                    </p>
+                <p className="text-muted-foreground text-base leading-relaxed line-clamp-3">{region.summary}</p>
 
-                    <div className="flex flex-wrap gap-2">
-                      {region.tags.map((tag) => (
-                        <Badge
-                          key={tag}
-                          variant="secondary"
-                          className="bg-primary/10 text-primary border-primary/20"
-                        >
-                          {tag}
-                        </Badge>
-                      ))}
+                <div className="flex flex-wrap gap-2">
+                  {region.tags.map((tag) => (
+                    <Badge
+                      key={tag}
+                      variant="secondary"
+                      className="bg-primary/10 text-primary border-primary/20"
+                    >
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  {region.metrics.map((metric) => (
+                    <div
+                      key={metric.label}
+                      className="rounded-xl border border-border/60 bg-background/60 p-3"
+                    >
+                      <p className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
+                        {metric.label}
+                      </p>
+                      <p className="text-lg font-bold text-foreground">{metric.value}</p>
                     </div>
-
-                    <div className="grid grid-cols-2 gap-3">
-                      {region.metrics.map((metric) => (
-                        <div
-                          key={metric.label}
-                          className="rounded-xl border border-border/60 bg-background/60 p-3"
-                        >
-                          <p className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
-                            {metric.label}
-                          </p>
-                          <p className="text-lg font-bold text-foreground">{metric.value}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </Card>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="-left-6 md:-left-10 bg-background shadow-md border-border" />
-          <CarouselNext className="-right-6 md:-right-10 bg-background shadow-md border-border" />
-        </Carousel>
+                  ))}
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );
