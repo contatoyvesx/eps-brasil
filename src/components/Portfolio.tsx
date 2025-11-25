@@ -1,10 +1,10 @@
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
-import centroOesteImage from '@/assets/centro-oeste.jpg';
-import nordesteImage from '@/assets/nordeste.jpg';
-import norteImage from '@/assets/norte.jpg';
-import sulImage from '@/assets/sul.jpg';
-import sudesteImage from '@/assets/suldeste.jpg';
+import centroOesteImage from '@/assets/centro-oeste.png';
+import nordesteImage from '@/assets/nordeste.png';
+import norteImage from '@/assets/norte.png';
+import sulImage from '@/assets/sul.png';
+import sudesteImage from '@/assets/suldeste.png';
 import { Globe2, Sparkles } from 'lucide-react';
 
 const regions = [
@@ -12,8 +12,9 @@ const regions = [
     title: 'Norte',
     image: norteImage,
     gradient: 'from-emerald-500/70 via-primary/70 to-emerald-700/70',
-    summary: '',
-    tags: [],
+    summary:
+      'Infraestrutura logística e industrial dimensionada para clima úmido, com montagem rápida e painéis de alta eficiência térmica.',
+    tags: ['Logística', 'Indústria', 'Isolamento avançado'],
     metrics: [
       { label: 'Prazo médio', value: '45 dias' },
       { label: 'Eficiência térmica', value: '+38%' },
@@ -23,8 +24,9 @@ const regions = [
     title: 'Nordeste',
     image: nordesteImage,
     gradient: 'from-orange-400/70 via-primary/70 to-amber-500/70',
-    summary: '',
-    tags: [],
+    summary:
+      'Soluções para alta insolação e maresia, com acabamentos resistentes à salinidade e conforto térmico superior.',
+    tags: ['Clima quente', 'Resistência à maresia', 'Acabamentos premium'],
     metrics: [
       { label: 'Projetos entregues', value: '22' },
       { label: 'Economia de energia', value: '30%' },
@@ -34,8 +36,9 @@ const regions = [
     title: 'Centro-Oeste',
     image: centroOesteImage,
     gradient: 'from-lime-400/70 via-primary/70 to-emerald-500/70',
-    summary: '',
-    tags: [],
+    summary:
+      'Galpões, centros de distribuição e residenciais otimizados para amplitudes térmicas e cronogramas acelerados.',
+    tags: ['CDs e galpões', 'Agroindústria', 'Entrega rápida'],
     metrics: [
       { label: 'Torres e galpões', value: '15' },
       { label: 'Redução de resíduos', value: '42%' },
@@ -45,8 +48,9 @@ const regions = [
     title: 'Sudeste',
     image: sudesteImage,
     gradient: 'from-sky-400/70 via-primary/70 to-blue-600/70',
-    summary: '',
-    tags: [],
+    summary:
+      'Obras corporativas e residenciais com alto padrão de acabamento, isolamento acústico e desempenho energético.',
+    tags: ['Corporativo', 'Alto padrão', 'Isolamento acústico'],
     metrics: [
       { label: 'Obras emblemáticas', value: '28' },
       { label: 'Prazo reduzido', value: '35%' },
@@ -56,8 +60,9 @@ const regions = [
     title: 'Sul',
     image: sulImage,
     gradient: 'from-indigo-400/70 via-primary/70 to-slate-800/70',
-    summary: '',
-    tags: [],
+    summary:
+      'Casas e chalés preparados para baixas temperaturas, com conforto acústico e aquecimento eficiente.',
+    tags: ['Clima frio', 'Residencial', 'Conforto acústico'],
     metrics: [
       { label: 'Chalés e casas', value: '19' },
       { label: 'Economia em aquecimento', value: '27%' },
