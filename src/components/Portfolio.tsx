@@ -95,6 +95,50 @@ const Portfolio = () => {
           </div>
         </div>
 
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3 mb-12">
+          {regions.map((region) => (
+            <Card
+              key={region.title}
+              className="overflow-hidden border-border/70 bg-background/80 backdrop-blur-lg shadow-lg shadow-primary/5"
+            >
+              <div className="relative h-48">
+                <img src={region.image} alt={`Região ${region.title}`} className="h-full w-full object-cover" />
+                <div className={`absolute inset-0 bg-gradient-to-br ${region.gradient}`} />
+                <div className="absolute inset-0 flex items-end">
+                  <div className="p-4 text-white">
+                    <p className="text-xs uppercase tracking-wide text-white/80">Região</p>
+                    <h3 className="text-xl font-bold leading-tight">{region.title}</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-4 space-y-4">
+                <p className="text-sm text-muted-foreground leading-relaxed">{region.summary}</p>
+
+                <div className="flex flex-wrap gap-2">
+                  {region.tags.map((tag) => (
+                    <Badge key={tag} variant="secondary" className="bg-primary/5 text-primary border-primary/10">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  {region.metrics.map((metric) => (
+                    <div
+                      key={metric.label}
+                      className="rounded-lg border border-border/60 bg-muted/40 px-3 py-2 text-sm text-muted-foreground"
+                    >
+                      <p className="text-xs uppercase tracking-wide text-muted-foreground/80">{metric.label}</p>
+                      <p className="font-semibold text-foreground">{metric.value}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+
         <Card className="border-border/70 bg-card/80 backdrop-blur-xl shadow-lg shadow-primary/10 p-6 sm:p-8 space-y-6">
           <div className="flex flex-wrap items-center gap-3">
             <Badge className="bg-primary/10 text-primary border-primary/20">Catálogo completo</Badge>
