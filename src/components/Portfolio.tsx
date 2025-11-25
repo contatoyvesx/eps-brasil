@@ -1,69 +1,6 @@
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
-import centroOesteImage from '@/assets/centro-oeste.jpg';
-import nordesteImage from '@/assets/nordeste.jpg';
-import norteImage from '@/assets/norte.jpg';
-import sulImage from '@/assets/sul.jpg';
-import sudesteImage from '@/assets/suldeste.jpg';
-import { Globe2, Sparkles } from 'lucide-react';
-
-const regions = [
-  {
-    title: 'Norte',
-    image: norteImage,
-    gradient: 'from-emerald-500/70 via-primary/70 to-emerald-700/70',
-    summary: '',
-    tags: [],
-    metrics: [
-      { label: 'Prazo médio', value: '45 dias' },
-      { label: 'Eficiência térmica', value: '+38%' },
-    ],
-  },
-  {
-    title: 'Nordeste',
-    image: nordesteImage,
-    gradient: 'from-orange-400/70 via-primary/70 to-amber-500/70',
-    summary: '',
-    tags: [],
-    metrics: [
-      { label: 'Projetos entregues', value: '22' },
-      { label: 'Economia de energia', value: '30%' },
-    ],
-  },
-  {
-    title: 'Centro-Oeste',
-    image: centroOesteImage,
-    gradient: 'from-lime-400/70 via-primary/70 to-emerald-500/70',
-    summary: '',
-    tags: [],
-    metrics: [
-      { label: 'Torres e galpões', value: '15' },
-      { label: 'Redução de resíduos', value: '42%' },
-    ],
-  },
-  {
-    title: 'Sudeste',
-    image: sudesteImage,
-    gradient: 'from-sky-400/70 via-primary/70 to-blue-600/70',
-    summary: '',
-    tags: [],
-    metrics: [
-      { label: 'Obras emblemáticas', value: '28' },
-      { label: 'Prazo reduzido', value: '35%' },
-    ],
-  },
-  {
-    title: 'Sul',
-    image: sulImage,
-    gradient: 'from-indigo-400/70 via-primary/70 to-slate-800/70',
-    summary: '',
-    tags: [],
-    metrics: [
-      { label: 'Chalés e casas', value: '19' },
-      { label: 'Economia em aquecimento', value: '27%' },
-    ],
-  },
-];
+import { Sparkles } from 'lucide-react';
 
 const Portfolio = () => {
   return (
@@ -81,78 +18,58 @@ const Portfolio = () => {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-12">
           <div className="text-center md:text-left">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
-              Obras que elevam <span className="text-primary">cada região</span>
+              Portfólio EPS BRASIL
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto md:mx-0">
-              Nossos projetos em EPS acompanham as particularidades climáticas e culturais do Brasil,
-              entregando conforto, velocidade e sustentabilidade em qualquer latitude.
+              Construções em EPS executadas com precisão industrial e acabamento premium, do residencial ao
+              corporativo. Fale com o time para receber o material completo de obras e soluções.
             </p>
           </div>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 justify-items-center">
-          {regions.map((region) => (
-            <Card
-              key={region.title}
-              className="group h-full overflow-hidden border-border/70 bg-card/80 backdrop-blur-xl shadow-lg shadow-primary/10 transition-transform duration-500 hover:-translate-y-2 shine-on-hover w-full max-w-[320px] sm:max-w-[360px] mx-auto"
+        <Card className="border-border/70 bg-card/80 backdrop-blur-xl shadow-lg shadow-primary/10 p-6 sm:p-8 space-y-6">
+          <div className="flex flex-wrap items-center gap-3">
+            <Badge className="bg-primary/10 text-primary border-primary/20">Catálogo completo</Badge>
+            <span className="text-muted-foreground text-sm">Residenciais | Comerciais | Industriais</span>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="rounded-xl border border-border/60 bg-background/60 p-4 space-y-2">
+              <p className="text-xs uppercase tracking-wide text-muted-foreground">Destaques</p>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>Estruturas leves com isolamento térmico superior</li>
+                <li>Montagem limpa e rápida com menor geração de resíduos</li>
+                <li>Acabamentos personalizados para diferentes setores</li>
+              </ul>
+            </div>
+
+            <div className="rounded-xl border border-border/60 bg-background/60 p-4 space-y-2">
+              <p className="text-xs uppercase tracking-wide text-muted-foreground">Como receber</p>
+              <p className="text-muted-foreground">
+                Entre em contato e envie seu segmento e localização. Nosso time retorna com o portfólio ilustrado e cases
+                aderentes à sua necessidade.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                  Materiais digitais
+                </Badge>
+                <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                  Tour das obras
+                </Badge>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-t border-border/60 pt-4">
+            <p className="text-muted-foreground">Acesse nosso portfólio e veja como o EPS acelera obras em todo o Brasil.</p>
+            <a
+              href="#contato"
+              className="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-md transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >
-              <div className="relative h-40 w-full overflow-hidden bg-muted">
-                <img
-                  src={region.image}
-                  alt={`Projeto na região ${region.title}`}
-                  className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
-                />
-                <div
-                  className={`absolute inset-0 opacity-0 group-hover:opacity-70 transition-opacity duration-700 bg-gradient-to-r ${region.gradient}`}
-                />
-              </div>
-
-              <div className="p-5 space-y-4">
-                <div className="flex items-center justify-between gap-3">
-                  <Badge className="w-fit bg-primary/10 text-primary border-primary/20">{region.title}</Badge>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Globe2 className="w-4 h-4" />
-                    <span>Implantação regional EPS</span>
-                  </div>
-                </div>
-
-                {region.summary && (
-                  <p className="text-muted-foreground text-base leading-relaxed line-clamp-3">
-                    {region.summary}
-                  </p>
-                )}
-
-                {!!region.tags.length && (
-                  <div className="flex flex-wrap gap-2">
-                    {region.tags.map((tag) => (
-                      <Badge
-                        key={tag}
-                        variant="secondary"
-                        className="bg-primary/10 text-primary border-primary/20"
-                      >
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                )}
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {region.metrics.map((metric) => (
-                    <div
-                      key={metric.label}
-                      className="rounded-xl border border-border/60 bg-background/60 p-3"
-                    >
-                      <p className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
-                        {metric.label}
-                      </p>
-                      <p className="text-lg font-bold text-foreground">{metric.value}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
+              Solicitar portfólio
+            </a>
+          </div>
+        </Card>
       </div>
     </section>
   );
