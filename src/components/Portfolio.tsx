@@ -79,28 +79,31 @@ const Portfolio = () => {
           </span>
         </div>
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-12">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="text-center md:text-left">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
               Obras que elevam <span className="text-primary">cada região</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto md:mx-0">
               Nossos projetos em EPS acompanham as particularidades climáticas e culturais do Brasil,
               entregando conforto, velocidade e sustentabilidade em qualquer latitude.
             </p>
           </div>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 justify-items-center">
           {regions.map((region) => (
             <Card
               key={region.title}
-              className="h-full overflow-hidden border-border/70 bg-card/80 backdrop-blur-xl shadow-lg shadow-primary/10"
+              className="group h-full overflow-hidden border-border/70 bg-card/80 backdrop-blur-xl shadow-lg shadow-primary/10 transition-transform duration-500 hover:-translate-y-2 shine-on-hover w-full max-w-[320px] sm:max-w-[360px] mx-auto"
             >
-              <div className="h-40 w-full overflow-hidden bg-muted">
+              <div className="relative h-40 w-full overflow-hidden bg-muted">
                 <img
                   src={region.image}
                   alt={`Projeto na região ${region.title}`}
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
+                />
+                <div
+                  className={`absolute inset-0 opacity-0 group-hover:opacity-70 transition-opacity duration-700 bg-gradient-to-r ${region.gradient}`}
                 />
               </div>
 
@@ -133,7 +136,7 @@ const Portfolio = () => {
                   </div>
                 )}
 
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {region.metrics.map((metric) => (
                     <div
                       key={metric.label}

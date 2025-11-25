@@ -33,25 +33,27 @@ const Services = () => {
     <section id="servicos" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Nossos <span className="text-primary">Serviços</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             Oferecemos soluções completas em construção com EPS para diversos tipos de
             projetos
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
           {services.map((service, index) => (
             <Card
               key={index}
-              className="p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group border-border bg-card"
+              className="p-6 sm:p-8 text-center hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group border-border bg-card shine-on-hover w-full max-w-[320px] sm:max-w-[360px] mx-auto"
             >
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
                 <service.icon className="w-8 h-8 text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-card-foreground">{service.title}</h3>
+              <h3 className="text-xl font-bold mb-3 text-card-foreground group-hover:text-primary transition-colors">
+                {service.title}
+              </h3>
               <p className="text-muted-foreground">{service.description}</p>
             </Card>
           ))}

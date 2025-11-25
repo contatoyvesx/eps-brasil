@@ -45,13 +45,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contato" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="contato" className="py-24 bg-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/10 animate-gradient-slow pointer-events-none" />
+      <div className="container mx-auto px-4 relative">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Entre em <span className="text-primary">Contato</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             Solicite um orçamento sem compromisso e descubra como a EPS BRASIL pode
             transformar seu projeto
           </p>
@@ -59,7 +60,7 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="lg:col-span-2">
-            <Card className="p-8 border-border bg-card">
+            <Card className="p-6 sm:p-8 border-border bg-card shine-on-hover">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="md:col-span-2">
@@ -116,11 +117,11 @@ const Contact = () => {
             </Card>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-6 flex flex-col items-center">
             {contactInfo.map((item, index) => (
               <Card
                 key={index}
-                className="p-6 hover:shadow-lg transition-all duration-300 border-border bg-card"
+                className="p-5 sm:p-6 hover:shadow-lg transition-all duration-500 border-border bg-card shine-on-hover w-full max-w-[320px] sm:max-w-[360px] mx-auto"
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
