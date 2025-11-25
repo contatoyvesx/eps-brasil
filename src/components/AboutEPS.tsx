@@ -48,7 +48,7 @@ const AboutEPS = () => {
               {features.map((feature, index) => (
                 <Card
                   key={index}
-                  className="p-5 sm:p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border bg-card w-full max-w-sm mx-auto"
+                  className="p-5 sm:p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border bg-card w-full max-w-[320px] sm:max-w-[360px] mx-auto"
                 >
                   <feature.icon className="w-8 h-8 text-primary mb-3" />
                   <h3 className="font-bold mb-2 text-card-foreground">{feature.title}</h3>

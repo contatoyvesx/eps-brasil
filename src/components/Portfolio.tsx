@@ -94,7 +94,7 @@ const Portfolio = () => {
           {regions.map((region) => (
             <Card
               key={region.title}
-              className="group h-full overflow-hidden border-border/70 bg-card/80 backdrop-blur-xl shadow-lg shadow-primary/10 transition-transform duration-500 hover:-translate-y-2 shine-on-hover w-full max-w-sm mx-auto"
+              className="group h-full overflow-hidden border-border/70 bg-card/80 backdrop-blur-xl shadow-lg shadow-primary/10 transition-transform duration-500 hover:-translate-y-2 shine-on-hover w-full max-w-[320px] sm:max-w-[360px] mx-auto"
             >
               <div className="relative h-40 w-full overflow-hidden bg-muted">
                 <img

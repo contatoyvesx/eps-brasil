@@ -121,7 +121,7 @@ const Contact = () => {
             {contactInfo.map((item, index) => (
               <Card
                 key={index}
-                className="p-5 sm:p-6 hover:shadow-lg transition-all duration-500 border-border bg-card shine-on-hover w-full max-w-sm mx-auto"
+                className="p-5 sm:p-6 hover:shadow-lg transition-all duration-500 border-border bg-card shine-on-hover w-full max-w-[320px] sm:max-w-[360px] mx-auto"
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
