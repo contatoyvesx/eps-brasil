@@ -5,13 +5,12 @@ import nordesteImage from '@/assets/nordeste.png';
 import norteImage from '@/assets/norte.png';
 import sulImage from '@/assets/sul.png';
 import sudesteImage from '@/assets/suldeste.png';
-import { Globe2, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 const regions = [
   {
     title: 'Norte',
     image: norteImage,
-    gradient: 'from-emerald-500/70 via-primary/70 to-emerald-700/70',
     summary:
       'Infraestrutura logística e industrial dimensionada para clima úmido, com montagem rápida e painéis de alta eficiência térmica.',
     tags: ['Logística', 'Indústria', 'Isolamento avançado'],
@@ -23,7 +22,6 @@ const regions = [
   {
     title: 'Nordeste',
     image: nordesteImage,
-    gradient: 'from-orange-400/70 via-primary/70 to-amber-500/70',
     summary:
       'Soluções para alta insolação e maresia, com acabamentos resistentes à salinidade e conforto térmico superior.',
     tags: ['Clima quente', 'Resistência à maresia', 'Acabamentos premium'],
@@ -35,7 +33,6 @@ const regions = [
   {
     title: 'Centro-Oeste',
     image: centroOesteImage,
-    gradient: 'from-lime-400/70 via-primary/70 to-emerald-500/70',
     summary:
       'Galpões, centros de distribuição e residenciais otimizados para amplitudes térmicas e cronogramas acelerados.',
     tags: ['CDs e galpões', 'Agroindústria', 'Entrega rápida'],
@@ -47,7 +44,6 @@ const regions = [
   {
     title: 'Sudeste',
     image: sudesteImage,
-    gradient: 'from-sky-400/70 via-primary/70 to-blue-600/70',
     summary:
       'Obras corporativas e residenciais com alto padrão de acabamento, isolamento acústico e desempenho energético.',
     tags: ['Corporativo', 'Alto padrão', 'Isolamento acústico'],
@@ -59,7 +55,6 @@ const regions = [
   {
     title: 'Sul',
     image: sulImage,
-    gradient: 'from-indigo-400/70 via-primary/70 to-slate-800/70',
     summary:
       'Casas e chalés preparados para baixas temperaturas, com conforto acústico e aquecimento eficiente.',
     tags: ['Clima frio', 'Residencial', 'Conforto acústico'],
@@ -93,6 +88,42 @@ const Portfolio = () => {
               corporativo. Fale com o time para receber o material completo de obras e soluções.
             </p>
           </div>
+        </div>
+
+        <div className="grid gap-2.5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mb-12">
+          {regions.map((region) => (
+            <Card
+              key={region.title}
+              className="overflow-hidden border-border/70 bg-background/80 backdrop-blur-lg shadow-md shadow-primary/5 text-xs"
+            >
+              <div className="relative aspect-square bg-muted">
+                <img
+                  src={region.image}
+                  alt={`Região ${region.title}`}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+
+              <div className="p-2 space-y-1.5">
+                <div>
+                  <p className="text-[10px] uppercase tracking-wide text-muted-foreground/80">Região</p>
+                  <h3 className="text-sm font-semibold leading-tight text-foreground">{region.title}</h3>
+                </div>
+
+                <div className="grid grid-cols-2 gap-1.5">
+                  {region.metrics.map((metric) => (
+                    <div
+                      key={metric.label}
+                      className="rounded-lg border border-border/60 bg-muted/40 px-2 py-1.5 text-[11px] text-muted-foreground"
+                    >
+                      <p className="text-[10px] uppercase tracking-wide text-muted-foreground/80">{metric.label}</p>
+                      <p className="font-semibold text-xs text-foreground">{metric.value}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Card>
+          ))}
         </div>
 
         <Card className="border-border/70 bg-card/80 backdrop-blur-xl shadow-lg shadow-primary/10 p-6 sm:p-8 space-y-6">
