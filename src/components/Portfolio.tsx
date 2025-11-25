@@ -1,6 +1,69 @@
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
-import { Sparkles } from 'lucide-react';
+import centroOesteImage from '@/assets/centro-oeste.png';
+import nordesteImage from '@/assets/nordeste.png';
+import norteImage from '@/assets/norte.png';
+import sulImage from '@/assets/sul.png';
+import sudesteImage from '@/assets/suldeste.png';
+import { Globe2, Sparkles } from 'lucide-react';
+
+const regions = [
+  {
+    title: 'Norte',
+    image: norteImage,
+    gradient: 'from-emerald-500/70 via-primary/70 to-emerald-700/70',
+    summary: '',
+    tags: [],
+    metrics: [
+      { label: 'Prazo médio', value: '45 dias' },
+      { label: 'Eficiência térmica', value: '+38%' },
+    ],
+  },
+  {
+    title: 'Nordeste',
+    image: nordesteImage,
+    gradient: 'from-orange-400/70 via-primary/70 to-amber-500/70',
+    summary: '',
+    tags: [],
+    metrics: [
+      { label: 'Projetos entregues', value: '22' },
+      { label: 'Economia de energia', value: '30%' },
+    ],
+  },
+  {
+    title: 'Centro-Oeste',
+    image: centroOesteImage,
+    gradient: 'from-lime-400/70 via-primary/70 to-emerald-500/70',
+    summary: '',
+    tags: [],
+    metrics: [
+      { label: 'Torres e galpões', value: '15' },
+      { label: 'Redução de resíduos', value: '42%' },
+    ],
+  },
+  {
+    title: 'Sudeste',
+    image: sudesteImage,
+    gradient: 'from-sky-400/70 via-primary/70 to-blue-600/70',
+    summary: '',
+    tags: [],
+    metrics: [
+      { label: 'Obras emblemáticas', value: '28' },
+      { label: 'Prazo reduzido', value: '35%' },
+    ],
+  },
+  {
+    title: 'Sul',
+    image: sulImage,
+    gradient: 'from-indigo-400/70 via-primary/70 to-slate-800/70',
+    summary: '',
+    tags: [],
+    metrics: [
+      { label: 'Chalés e casas', value: '19' },
+      { label: 'Economia em aquecimento', value: '27%' },
+    ],
+  },
+];
 
 const Portfolio = () => {
   return (
