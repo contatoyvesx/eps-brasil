@@ -90,11 +90,11 @@ const Portfolio = () => {
           </div>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mb-12">
+        <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mb-12">
           {regions.map((region) => (
             <Card
               key={region.title}
-              className="overflow-hidden border-border/70 bg-background/80 backdrop-blur-lg shadow-md shadow-primary/5"
+              className="overflow-hidden border-border/70 bg-background/80 backdrop-blur-lg shadow-md shadow-primary/5 text-sm"
             >
               <div className="relative aspect-square">
                 <img
@@ -104,20 +104,20 @@ const Portfolio = () => {
                 />
               </div>
 
-              <div className="p-3 space-y-3">
+              <div className="p-2.5 space-y-2">
                 <div>
-                  <p className="text-[11px] uppercase tracking-wide text-muted-foreground/80">Região</p>
-                  <h3 className="text-lg font-semibold leading-tight text-foreground">{region.title}</h3>
+                  <p className="text-[10px] uppercase tracking-wide text-muted-foreground/80">Região</p>
+                  <h3 className="text-base font-semibold leading-tight text-foreground">{region.title}</h3>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-2">
                   {region.metrics.map((metric) => (
                     <div
                       key={metric.label}
-                      className="rounded-lg border border-border/60 bg-muted/40 px-3 py-2 text-sm text-muted-foreground"
+                      className="rounded-lg border border-border/60 bg-muted/40 px-2.5 py-2 text-xs text-muted-foreground"
                     >
-                      <p className="text-xs uppercase tracking-wide text-muted-foreground/80">{metric.label}</p>
-                      <p className="font-semibold text-foreground">{metric.value}</p>
+                      <p className="text-[10px] uppercase tracking-wide text-muted-foreground/80">{metric.label}</p>
+                      <p className="font-semibold text-sm text-foreground">{metric.value}</p>
                     </div>
                   ))}
                 </div>
