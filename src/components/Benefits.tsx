@@ -61,7 +61,7 @@ const Benefits = () => {
             {benefits.map((benefit, index) => (
               <Card
                 key={index}
-                className="p-5 sm:p-6 hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border-border bg-card shine-on-hover w-full max-w-[320px] sm:max-w-[360px] mx-auto"
+                className="p-5 sm:p-6 hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border-border bg-card shine-on-hover w-full max-w-full sm:max-w-[320px] lg:max-w-[360px] mx-auto"
               >
                 <benefit.icon className="w-10 h-10 text-primary mb-4" />
                 <h3 className="text-lg font-bold mb-2 text-card-foreground">{benefit.title}</h3>
