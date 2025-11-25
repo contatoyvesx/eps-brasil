@@ -110,16 +110,6 @@ const Portfolio = () => {
                   <h3 className="text-lg font-semibold leading-tight text-foreground">{region.title}</h3>
                 </div>
 
-                <p className="text-sm text-muted-foreground leading-relaxed">{region.summary}</p>
-
-                <div className="flex flex-wrap gap-2">
-                  {region.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="bg-primary/5 text-primary border-primary/10">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-
                 <div className="grid grid-cols-2 gap-3">
                   {region.metrics.map((metric) => (
                     <div
