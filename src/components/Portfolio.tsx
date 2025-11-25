@@ -1,10 +1,10 @@
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
-import centroOesteImage from '@/assets/centro-oeste.jpg';
-import nordesteImage from '@/assets/nordeste.jpg';
-import norteImage from '@/assets/norte.jpg';
-import sulImage from '@/assets/sul.jpg';
-import sudesteImage from '@/assets/suldeste.jpg';
+import centroOesteImage from '@/assets/centro-oeste.png';
+import nordesteImage from '@/assets/nordeste.png';
+import norteImage from '@/assets/norte.png';
+import sulImage from '@/assets/sul.png';
+import sudesteImage from '@/assets/suldeste.png';
 import { Globe2, Sparkles } from 'lucide-react';
 
 const regions = [
