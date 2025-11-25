@@ -96,8 +96,12 @@ const Portfolio = () => {
               key={region.title}
               className="overflow-hidden border-border/70 bg-background/80 backdrop-blur-lg shadow-md shadow-primary/5"
             >
-              <div className="relative h-32">
-                <img src={region.image} alt={`Região ${region.title}`} className="h-full w-full object-cover" />
+              <div className="relative aspect-square">
+                <img
+                  src={region.image}
+                  alt={`Região ${region.title}`}
+                  className="h-full w-full object-contain bg-muted"
+                />
               </div>
 
               <div className="p-3 space-y-3">
